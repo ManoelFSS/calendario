@@ -89,11 +89,11 @@ hendle_selectAtive02()
 
 const area_btns = document.querySelector(".area_btns")
 
-
 li_du.forEach((e)=>{
    
     e.addEventListener("click", (e)=>{
         area_btns.innerHTML = ""
+
         hendelLocalstorage(e.target.innerText)
         teste()
         action_btn()
@@ -189,8 +189,6 @@ const hendelLocalstorage = (e) => {
        
     }
 }
-
-
 hendelLocalstorage()
 
 const teste = () => {
@@ -210,8 +208,7 @@ const teste = () => {
       
     })
 
-}
-
+} 
 teste()
 
 
@@ -241,7 +238,6 @@ const btn = document.querySelector(".btn")
         })
     })
 }
-
 action_btn()
 
 
