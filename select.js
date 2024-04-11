@@ -96,6 +96,7 @@ li_du.forEach((e)=>{
         area_btns.innerHTML = ""
         hendelLocalstorage(e.target.innerText)
         teste()
+        action_btn()
 
         const h4 = document.querySelector(".select_Duration h4")
         h4.innerText = e.target.innerText
@@ -212,6 +213,36 @@ const teste = () => {
 }
 
 teste()
+
+
+const action_btn = () => {
+    
+const container_btn = document.querySelectorAll(".container_btn")
+
+const hr= document.querySelector(".hr")
+const btn = document.querySelector(".btn")
+
+    container_btn.forEach((e)=>{
+
+        e.addEventListener("click", ()=>{
+    
+            container_btn.forEach((e)=>{
+                e.children[0].classList.remove("hr_Ativo")
+                e.children[1].classList.remove("btn_Ativo")
+                e.style.border = ""
+            })
+    
+            console.log(e.children[0])
+            console.log(e.children[1])
+            e.children[0].classList.add("hr_Ativo")
+            e.children[1].classList.add("btn_Ativo")
+            e.style.border = "none"
+    
+        })
+    })
+}
+
+action_btn()
 
 
 
