@@ -95,7 +95,7 @@ li_du.forEach((e)=>{
         area_btns.innerHTML = ""
 
         hendelLocalstorage(e.target.innerText)
-        teste()
+        hendle_hr()
         action_btn()
 
         const h4 = document.querySelector(".select_Duration h4")
@@ -125,8 +125,6 @@ select_Duration.addEventListener("click", ()=>{
         },10)
         span_du.style.transform = "rotate(180deg)"
     }
-
-   
   
 })
 
@@ -191,7 +189,7 @@ const hendelLocalstorage = (e) => {
 }
 hendelLocalstorage()
 
-const teste = () => {
+const hendle_hr = () => {
 
     const geteLocal = JSON.parse(localStorage.getItem("hr"))
 
@@ -209,7 +207,7 @@ const teste = () => {
     })
 
 } 
-teste()
+hendle_hr()
 
 
 const action_btn = () => {

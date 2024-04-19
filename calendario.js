@@ -38,15 +38,31 @@ let agenda = [
 
 const renderCalendar = () => {
     calendar_dias.innerHTML = "";
-   
+    const daysInMonth_anterior = new Date(year, month, 0).getDate();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDayOfMonth = new Date(year, month, 1).getDay();
-
+    
+    let array = []
 
     for (let i = 0; i < firstDayOfMonth; i++) {
-        let emptySpan = document.createElement("div");
-        emptySpan.classList.add("empty");
-        calendar_dias.appendChild(emptySpan);
+        
+        array.unshift(daysInMonth_anterior - i)
+
+        if(i + 1 === firstDayOfMonth){
+           
+            array.map((e)=>{
+
+                let emptySpan = document.createElement("div");
+                emptySpan.innerText = e
+                emptySpan.classList.add("empty");
+                emptySpan.style.backgroundColor = "#f9f6f6"
+                emptySpan.style.borderLeft = "solid 3px #fff"
+                calendar_dias.appendChild(emptySpan);
+
+            })
+        }
+    
+        
     }
 
     for (let i = 1; i <= daysInMonth; i++) {
