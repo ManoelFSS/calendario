@@ -33,6 +33,24 @@ let agenda = [
         mes:months[month],
         data:"29",
         horas:"14",
+    },
+    {
+        ano:2024,
+        mes:months[month],
+        data:"22",
+        horas:"14",
+    },
+    {
+        ano:2024,
+        mes:months[month + 1],
+        data:"2",
+        horas:"14",
+    },
+    {
+        ano:2024,
+        mes:months[month + 2],
+        data:"23",
+        horas:"14",
     }
 ]
 
@@ -77,7 +95,15 @@ const renderCalendar = () => {
         agenda.forEach(item => {
             
             if (year === item.ano && months[month] === item.mes && item.data === i.toString()) {
+         
                 span.classList.add("agendado");
+             // marca a data em vermelho caso a data atual seja maior que a data agendada assim se o dia do agendamento ja se passou marca vermelho
+                if(dia > item.data && months[mesAtual]  === months[month]){
+                    span.style.backgroundColor = "red"
+                    span.style.color = "#fff"
+                    span.style.opacity = 0.4
+                }
+
             }
         });
     

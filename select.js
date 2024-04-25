@@ -193,8 +193,6 @@ const hendle_hr = () => {
 
     const geteLocal = JSON.parse(localStorage.getItem("hr"))
 
-    console.log(geteLocal)
-
     geteLocal.map((e)=> {
         const btns = `
             <div class="container_btn">
@@ -227,7 +225,6 @@ const btn = document.querySelector(".btn")
                 e.style.border = ""
             })
     
-            console.log(e.children[0])
             console.log(e.children[1])
             e.children[0].classList.add("hr_Ativo")
             e.children[1].classList.add("btn_Ativo")

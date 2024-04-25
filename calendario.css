@@ -201,12 +201,13 @@ select option:checked {
  .dia_Ativo::after {
     position: absolute;
     content: "";
-    width: 25px;
-    height: 25px;
+    width: 8px;
+    height: 8px;
     /* background-color: #D7E164; */
-    left: 12%;
-    top: 3px;
-    border: solid 3px #D7E164;
+    left: 43%;
+    top: 29px;
+    border-radius: 50%;
+    background-color:#D7E164;
  
 }
 
